@@ -6,16 +6,9 @@ import joblib
 import requests
 from PIL import Image
 
-def download_model_from_url(url):
-    response = requests.get(url)
-    return joblib.load(response.content)
-
-model_url = "https://www.example.com/path/to/your/large/model.pkl"
-model = download_model_from_url(model_url)
-
 
 # Load the model
-#model = joblib.load(open("C:/Users/DELL/Downloads/myenv/Scripts/Rainfall prediction/models/bagging.pkl", "rb"))
+model = joblib.load("models/bagging.pkl")
 
 def predict_rainfall():
     # DATE
