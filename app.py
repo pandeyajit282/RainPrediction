@@ -5,6 +5,7 @@ import datetime
 import joblib
 import requests
 from PIL import Image
+import sklearn
 
 
 # Load the model
