@@ -6,6 +6,7 @@ import joblib
 import requests
 from PIL import Image
 import sklearn
+from sklearn.ensemble import BaggingClassifier
 
 
 # Load the model
