@@ -24,6 +24,7 @@ A project on predicting whether it will rain tomorrow or not by using the Rainfa
 
 ###  Model Creation:
 - Different types of models were tried like catboost, random forest, logistic regression, xgboost, knn, naive bayes.
+- All the models worked with random search cross validation
 - Out of these bagging, random forest and xgboost were top 3
 - The conclusion were made using classification metrics. roc curve and auc score
 
