@@ -123,6 +123,7 @@ def predict_rainfall():
 def main():
     # Set a title for your app
     st.title('Rainfall Prediction App')
+    st.markdown("<br>", unsafe_allow_html=True)
     st.write('Enter input data:')
     predict_rainfall()
 
