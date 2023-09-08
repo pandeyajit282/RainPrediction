@@ -8,6 +8,28 @@ from PIL import Image
 import sklearn
 from sklearn.ensemble import BaggingClassifier
 
+st.markdown(
+    """
+    <style>
+        .css-1v3fvcr {  /* Primary color */
+            color: #F63366;
+        }
+        body {  /* Background color */
+            background-color: #FFFFFF;
+        }
+        .css-3r66q9 {  /* Secondary background color */
+            background-color: #F0F2F6;
+        }
+        .css-1aumxhk {  /* Text color */
+            color: #262730;
+        }
+        .stApp {  /* Font */
+            font-family: "sans serif";
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 # Load the model
 model = joblib.load("./models/bagging.pkl")
@@ -36,11 +58,11 @@ def predict_rainfall():
         windSpeed9am = st.number_input("Wind Speed 9am", value = 20)
         # Wind Speed 3pm
         windSpeed3pm = st.number_input("Wind Speed 3pm", value =  24)
-    with col2:
         # Humidity 9am
         humidity9am = st.number_input("Humidity 9am", value =71)
         # Humidity 3pm
         humidity3pm = st.number_input("Humidity 3pm", value =22)
+    with col2:
         # Pressure 9am
         pressure9am = st.number_input("Pressure 9am", value = 1007.7)
         # Pressure 3pm
