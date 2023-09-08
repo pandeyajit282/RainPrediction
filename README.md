@@ -5,7 +5,7 @@ A project on predicting whether it will rain tomorrow or not by using the Rainfa
 ### Web App link: https://rainprediction-jtfsdsjdgqrbw6pveunym8.streamlit.app/
 
 ### Testing Values for sunny day
-![Input for Rainy](images/input_for_sunny.png)
+![Input for Sunny](images/input_for_sunny.png)
 
 ### Testing Values for rainy day
 ![Input for Rainy](images/input_for_rainy.png)
