@@ -62,27 +62,31 @@ def predict_rainfall():
 
     rainToday_value = 0 if rainToday == "No" else 1
 
-    input_lst = [location , minTemp , maxTemp , rainfall , evaporation , sunshine ,
-                 windGustDir , windGustSpeed , winddDir9am , winddDir3pm , windSpeed9am , windSpeed3pm ,
-                 humidity9am , humidity3pm , pressure9am , pressure3pm , cloud9am , cloud3pm , temp9am , temp3pm ,
-                 rainToday_value , month , day]
+    if st.button("Predict"):
+        # When the button is clicked, perform the prediction
+        input_lst = [location, minTemp, maxTemp, rainfall, evaporation, sunshine,
+                     windGustDir, windGustSpeed, winddDir9am, winddDir3pm, windSpeed9am, windSpeed3pm,
+                     humidity9am, humidity3pm, pressure9am, pressure3pm, cloud9am, cloud3pm, temp9am, temp3pm,
+                     rainToday_value, month, day]
 
-    input_df = pd.DataFrame([input_lst], columns=['Location', 'MinTemp', 'MaxTemp', 'Rainfall', 'Evaporation',
-                                                  'Sunshine', 'WindGustDir', 'WindGustSpeed', 'WindDir9am',
-                                                  'WindDir3pm', 'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am',
-                                                  'Humidity3pm', 'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm',
-                                                  'Temp9am', 'Temp3pm', 'RainToday', 'Month', 'Day'])
-    pred = model.predict(input_df)
-    output = pred[0]
-    if output == 0:
-        image1 = Image.open("./images/sunny.png")
-        st.image(image1)
-        st.write("It will be sunny!")
-    else:
-        image2 = Image.open("./images/rainy.png")
-        st.image(image2)
-        st.write("It will be rainy!")
+        input_df = pd.DataFrame([input_lst], columns=['Location', 'MinTemp', 'MaxTemp', 'Rainfall', 'Evaporation',
+                                                      'Sunshine', 'WindGustDir', 'WindGustSpeed', 'WindDir9am',
+                                                      'WindDir3pm', 'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am',
+                                                      'Humidity3pm', 'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm',
+                                                      'Temp9am', 'Temp3pm', 'RainToday', 'Month', 'Day'])
+        
+        pred = model.predict(input_df)
+        output = pred[0]
+        if output == 0:
+            image1 = Image.open("./images/sunny.png")
+            st.image(image1)
+            st.markdown("It will be sunny!")
+        else:
+            image2 = Image.open("./images/rainy.png")
+            st.image(image2)
+            st.markdown("It will be rainy!")
 
+    
 def main():
     # Set a title for your app
     st.title('Rainfall Prediction App')
