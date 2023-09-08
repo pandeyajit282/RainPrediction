@@ -13,52 +13,56 @@ from sklearn.ensemble import BaggingClassifier
 model = joblib.load("./models/bagging.pkl")
 
 def predict_rainfall():
-    # DATE
-    date = st.date_input("Date")
-    day = float(date.day)
-    month = float(date.month)
-    # MinTemp
-    minTemp = st.number_input("Min Temperature",value = 30 )
-    # MaxTemp
-    maxTemp = st.number_input("Max Temperature", value= 13.4)
-    # Rainfall
-    rainfall = st.number_input("Rainfall", value = 0.6)
-    # Evaporation
-    evaporation = st.number_input("Evaporation", value = 2.4)
-    # Sunshine
-    sunshine = st.number_input("Sunshine", value = 8.3)
-    # Wind Gust Speed
-    windGustSpeed = st.number_input("Wind Gust Speed", value = 44)
-    # Wind Speed 9am
-    windSpeed9am = st.number_input("Wind Speed 9am", value = 20)
-    # Wind Speed 3pm
-    windSpeed3pm = st.number_input("Wind Speed 3pm", value =  24)
-    # Humidity 9am
-    humidity9am = st.number_input("Humidity 9am", value =71)
-    # Humidity 3pm
-    humidity3pm = st.number_input("Humidity 3pm", value =22)
-    # Pressure 9am
-    pressure9am = st.number_input("Pressure 9am", value = 1007.7)
-    # Pressure 3pm
-    pressure3pm = st.number_input("Pressure 3pm", value = 1007.1)
-    # Temperature 9am
-    temp9am = st.number_input("Temperature 9am", value =  16.9)
-    # Temperature 3pm
-    temp3pm = st.number_input("Temperature 3pm", value =21.8)
-    # Cloud 9am
-    cloud9am = st.number_input("Cloud 9am",value = 8)
-    # Cloud 3pm
-    cloud3pm = st.number_input("Cloud 3pm", value = 0)
-    # Cloud 3pm
-    location = st.number_input("Location", value = 30)
-    # Wind Dir 9am
-    winddDir9am = st.number_input("Wind Dir 9am", value = 5)
-    # Wind Dir 3pm
-    winddDir3pm = st.number_input("Wind Dir 3pm", value = 3)
-    # Wind Gust Dir
-    windGustDir = st.number_input("Wind Gust Dir", value = 4)
-    # Rain Today
-    rainToday = st.selectbox("Rain Today", ["No", "Yes"])
+    col1, col2 = st.columns(2)  # Create two columns
+
+    with col1:
+        # DATE
+        date = st.date_input("Date")
+        day = float(date.day)
+        month = float(date.month)
+        # MinTemp
+        minTemp = st.number_input("Min Temperature",value = 30 )
+        # MaxTemp
+        maxTemp = st.number_input("Max Temperature", value= 13.4)
+        # Rainfall
+        rainfall = st.number_input("Rainfall", value = 0.6)
+        # Evaporation
+        evaporation = st.number_input("Evaporation", value = 2.4)
+        # Sunshine
+        sunshine = st.number_input("Sunshine", value = 8.3)
+        # Wind Gust Speed
+        windGustSpeed = st.number_input("Wind Gust Speed", value = 44)
+        # Wind Speed 9am
+        windSpeed9am = st.number_input("Wind Speed 9am", value = 20)
+        # Wind Speed 3pm
+        windSpeed3pm = st.number_input("Wind Speed 3pm", value =  24)
+    with col2:
+        # Humidity 9am
+        humidity9am = st.number_input("Humidity 9am", value =71)
+        # Humidity 3pm
+        humidity3pm = st.number_input("Humidity 3pm", value =22)
+        # Pressure 9am
+        pressure9am = st.number_input("Pressure 9am", value = 1007.7)
+        # Pressure 3pm
+        pressure3pm = st.number_input("Pressure 3pm", value = 1007.1)
+        # Temperature 9am
+        temp9am = st.number_input("Temperature 9am", value =  16.9)
+        # Temperature 3pm
+        temp3pm = st.number_input("Temperature 3pm", value =21.8)
+        # Cloud 9am
+        cloud9am = st.number_input("Cloud 9am",value = 8)
+        # Cloud 3pm
+        cloud3pm = st.number_input("Cloud 3pm", value = 0)
+        # Cloud 3pm
+        location = st.number_input("Location", value = 30)
+        # Wind Dir 9am
+        winddDir9am = st.number_input("Wind Dir 9am", value = 5)
+        # Wind Dir 3pm
+        winddDir3pm = st.number_input("Wind Dir 3pm", value = 3)
+        # Wind Gust Dir
+        windGustDir = st.number_input("Wind Gust Dir", value = 4)
+        # Rain Today
+        rainToday = st.selectbox("Rain Today", ["No", "Yes"])
 
     rainToday_value = 0 if rainToday == "No" else 1
 
