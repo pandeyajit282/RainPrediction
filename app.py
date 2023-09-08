@@ -8,6 +8,14 @@ from PIL import Image
 import sklearn
 from sklearn.ensemble import BaggingClassifier
 
+st.set_page_config(
+    page_title="Rainfall Prediction App",
+    page_icon=":partly_sunny:",  # You can use any emoji as an icon
+    layout="wide",  # Use "wide" layout for two sections side by side
+    initial_sidebar_state="collapsed",  # Sidebar initially collapsed
+    theme="light",  # Choose the light theme
+)
+
 st.markdown(
     """
     <style>
