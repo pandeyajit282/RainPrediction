@@ -50,9 +50,9 @@ def predict_rainfall():
         day = float(date.day)
         month = float(date.month)
         # MinTemp
-        minTemp = st.number_input("Min Temperature",value = 30 )
+        minTemp = st.number_input("Min Temperature",value = 13.4 )
         # MaxTemp
-        maxTemp = st.number_input("Max Temperature", value= 13.4)
+        maxTemp = st.number_input("Max Temperature", value= 30)
         # Rainfall
         rainfall = st.number_input("Rainfall", value = 0.6)
         # Evaporation
