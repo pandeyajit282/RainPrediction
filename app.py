@@ -80,11 +80,11 @@ def predict_rainfall():
         if output == 0:
             image1 = Image.open("./images/sunny.png")
             st.image(image1)
-            st.markdown("It will be sunny!")
+            st.header("It will be sunny!")
         else:
             image2 = Image.open("./images/rainy.png")
             st.image(image2)
-            st.markdown("It will be rainy!")
+            st.header("It will be rainy!")
 
     
 def main():
