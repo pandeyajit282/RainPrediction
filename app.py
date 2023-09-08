@@ -75,11 +75,11 @@ def predict_rainfall():
     pred = model.predict(input_df)
     output = pred[0]
     if output == 0:
-        image1 = Image.open("./sunny.png")
+        image1 = Image.open(".images/sunny.png")
         st.image(image1)
         st.write("It will be sunny!")
     else:
-        image2 = Image.open("./rainy.png")
+        image2 = Image.open(".images/rainy.png")
         st.image(image2)
         st.write("It will be rainy!")
 
