@@ -6,7 +6,7 @@ import joblib
 import requests
 from PIL import Image
 import sklearn
-from sklearn.ensemble import BaggingClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 st.set_page_config(
     page_title="Rainfall Prediction App",
