@@ -2,7 +2,7 @@
 
 A project on predicting whether it will rain tomorrow or not by using the Rainfall in Australia dataset. This project is tested over different models like catboost, logistic regression, xgboost, random forest, bagging classifier etc.. Out of these models bagging performed best giving an accuracy of 0.86 . In this, I also performed Hyperparameter tuning for all the models.
 
-### [Download random forest model]()
+### [Download random forest model](https://drive.google.com/file/d/1wbcmGsb4qdkflORx5xFMuTGdQk8xiMNW/view?usp=sharing)
 
 ### Web App link: https://rainprediction-jtfsdsjdgqrbw6pveunym8.streamlit.app/
 
@@ -20,7 +20,7 @@ A project on predicting whether it will rain tomorrow or not by using the Rainfa
 
 ###  Model Creation:
 - Different types of models were tried like logistic regression, KNN, random forest, Adaboost, xgboost.
-- All the models worked with random search cross validation
+- All the models worked with random search cross validation.
 - Out of these random forest gave the best accuracy.
 
 ### Model Deployment
