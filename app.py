@@ -39,7 +39,7 @@ st.markdown(
 )
 
 # Load the model
-model = joblib.load("./models/bagging.pkl")
+model = joblib.load("rf_final.pkl")
 
 def predict_rainfall():
     col1, col2 = st.columns(2)  # Create two columns
