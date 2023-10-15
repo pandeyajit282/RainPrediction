@@ -19,10 +19,9 @@ A project on predicting whether it will rain tomorrow or not by using the Rainfa
 - Imbalanced Dataset was handled using SMOTE
 
 ###  Model Creation:
-- Different types of models were tried like catboost, random forest, logistic regression, xgboost, knn, naive bayes.
+- Different types of models were tried like logistic regression, KNN, random forest, Adaboost, xgboost.
 - All the models worked with random search cross validation
-- Out of these bagging, random forest and xgboost were top 3
-- The conclusion were made using classification metrics. roc curve and auc score
+- Out of these random forest gave the best accuracy.
 
 ### Model Deployment
 The model is deployed using streamlit at streamlit cloud server.
