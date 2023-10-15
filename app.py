@@ -15,28 +15,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed",  # Sidebar initially collapsed
 )
 
-st.markdown(
-    """
-    <style>
-        .css-1v3fvcr {  /* Primary color */
-            color: #F63366;
-        }
-        body {  /* Background color */
-            background-color: #FFFFFF;
-        }
-        .css-3r66q9 {  /* Secondary background color */
-            background-color: #F0F2F6;
-        }
-        .css-1aumxhk {  /* Text color */
-            color: #262730;
-        }
-        .stApp {  /* Font */
-            font-family: "sans serif";
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 
 # Load the model
 model = joblib.load("rf_final.pkl")
