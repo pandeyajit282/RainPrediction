@@ -6,7 +6,7 @@ import joblib
 import requests
 from PIL import Image
 import sklearn
-from sklearn.ensemble import BaggingClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 st.set_page_config(
     page_title="Rainfall Prediction App",
@@ -15,31 +15,9 @@ st.set_page_config(
     initial_sidebar_state="collapsed",  # Sidebar initially collapsed
 )
 
-st.markdown(
-    """
-    <style>
-        .css-1v3fvcr {  /* Primary color */
-            color: #F63366;
-        }
-        body {  /* Background color */
-            background-color: #FFFFFF;
-        }
-        .css-3r66q9 {  /* Secondary background color */
-            background-color: #F0F2F6;
-        }
-        .css-1aumxhk {  /* Text color */
-            color: #262730;
-        }
-        .stApp {  /* Font */
-            font-family: "sans serif";
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 
 # Load the model
-model = joblib.load("./models/bagging.pkl")
+model = joblib.load("rf_final.pkl")
 
 def predict_rainfall():
     col1, col2 = st.columns(2)  # Create two columns
